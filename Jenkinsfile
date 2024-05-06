@@ -16,7 +16,7 @@ pipeline {
                     docker.build('vote', './vote')
                     docker.build('result', './result')
                     docker.build('worker', './worker')
-                    docker.withRegistry('https://hub.docker.com/repository/docker/rettig/devops-automation', 'f304fd37-5fe3-4a9a-8755-15e29975fd8a') {
+                    docker.withRegistry('https://index.docker.io/v1/', 'f304fd37-5fe3-4a9a-8755-15e29975fd8a') {
                         docker.image('vote').push('latest')
                         docker.image('result').push('latest')
                         docker.image('worker').push('latest')
