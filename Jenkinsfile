@@ -5,7 +5,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 // Checkout des Codes aus dem GitHub-Repository
-                git 'https://github.com/marcelrettig/devops-automation.git'
+                git branch: 'main' url:'https://github.com/marcelrettig/devops-automation.git'
             }
         }
         
